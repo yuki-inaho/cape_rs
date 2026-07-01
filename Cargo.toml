@@ -1,0 +1,19 @@
+[package]
+name = "cape-rust-pyo3"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Rust/PyO3 MVP port of CAPE plane and cylinder extraction from organized depth images"
+repository = ""
+
+[lib]
+name = "cape_pyo3"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.23", features = ["extension-module"] }
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3

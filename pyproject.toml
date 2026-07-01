@@ -1,0 +1,29 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "cape-rust-pyo3"
+version = "0.1.0"
+description = "Rust/PyO3 port of CAPE plane and cylinder extraction with a Jupyter demo"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "LLM Agent" }]
+dependencies = [
+  "numpy>=1.24",
+  "pillow>=10.0",
+  "matplotlib>=3.7",
+  "ipykernel>=6.0",
+  "nbconvert>=7.0",
+  "pytest>=8.0",
+]
+
+[tool.maturin]
+module-name = "cape_pyo3"
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["python"]
+addopts = "-q"
