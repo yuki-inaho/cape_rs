@@ -21,7 +21,7 @@ def main() -> None:
     if plane_count < 1 or cylinder_count < 1:
         raise RuntimeError(f"expected at least one plane and cylinder, got {plane_count=} {cylinder_count=}")
 
-    print(f"source={scene.source_dir}")
+    print("source=data/seq_example")
     print(f"planes={plane_count} cylinders={cylinder_count}")
     print(f"stats={result['stats']}")
     if args.out is not None:

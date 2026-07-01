@@ -11,7 +11,7 @@ Official Repository: [github.com/pedropro/CAPE](https://github.com/pedropro/CAPE
 - `data/seq_example/`: official CAPE sample frame copied from `pedropro/CAPE`.
 - `notebooks/cape_pyo3_demo.ipynb`: official CAPE sample depth/RGB demo.
 - `tests/`: PyO3-backed tests for the official sample demo.
-- `docs/`: design notes and completion definition.
+- `docs/`: onboarding notes for future LLM agents.
 - `justfile`: repeatable commands.
 
 ## Build and development
